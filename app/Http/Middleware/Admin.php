@@ -16,11 +16,6 @@ class Admin
      */
     public function handle(Request $request, Closure $next)
     {
-        if (auth()->user()->role=='user')
-        {
-
-            return  redirect('login');
-        }
         return $next($request);
     }
 }

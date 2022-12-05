@@ -15,15 +15,15 @@ class CreateAboutUsTable extends Migration
     {
         Schema::create('about__us', function (Blueprint $table) {
             $table->id();
-            $table->string('siteName');
-            $table->string('sitDescription');
-            $table->string('sitImage');
-            $table->string('facebook');
-            $table->string('tweeter');
-            $table->string('linkin');
-            $table->integer('phone');
-            $table->string('email');
-            $table->string('address');
+            $table->string('siteName')->default('Book Store');
+            $table->string('sitDescription')->default('Site Description');
+            $table->string('sitImage')->default('image/image.jpg');
+            $table->string('facebook')->default('facebook');
+            $table->string('tweeter')->default('tweeter');
+            $table->string('linkin')->default('linkin');
+            $table->integer('phone')->default('01095370946');
+            $table->string('email')->default('iprahimapdoo@gmail.com');
+            $table->string('address')->default('embaba , giza');
             $table->timestamps();
         });
     }

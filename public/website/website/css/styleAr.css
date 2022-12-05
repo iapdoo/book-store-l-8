@@ -394,6 +394,7 @@ i
 
 .product-detail .product-single-price{
     float: right;
+    display: contents;
 }
 .product-detail .product-single-price h4 .real-price{
     color: orange;
