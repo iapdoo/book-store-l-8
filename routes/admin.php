@@ -12,13 +12,13 @@ use App\Http\Controllers\Product\ProductController;
 Route::prefix('admin')->group(function () {
 
     ############ Start   Admin Login #################
-    Route::get('login', [AuthAdminController::class, 'login']);
+    Route::get('login', [AuthAdminController::class, 'login'])->name('admin.login');
     Route::post('login', [AuthAdminController::class, 'dologin'])->name('admin.dologin');
-
-    ############ End   Admin Login #################
+    Route::any('logout',[AuthAdminController::class, 'logout'])->name('admin.logout');
+    ############ End   Admin Login ###################
 });
 
-Route::middleware(['auth:admin', 'web'])->group(function () {
+Route::middleware(['auth:admin'])->group(function () {
     Route::get('/adminpanel', [AdminController::class , 'index']);
     Route::get('/users', [AdminController::class , 'getUser'])->name('users');
     Route::get('users/{id}/edit', [AdminController::class , 'edit']);

@@ -47,6 +47,14 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-8">
+                        <div class="icheck-primary">
+                            <input type="checkbox" name="remember" value="1" id="remember">
+                            <label for="remember">
+                                Remember Me
+                            </label>
+                        </div>
+                    </div>
                     <!-- /.col -->
                     <div class="col-4">
                         <button type="submit" class="btn btn-primary btn-block">Sign In</button>
@@ -54,6 +62,7 @@
                     <!-- /.col -->
                 </div>
             </form>
+
         </div>
         <!-- /.login-card-body -->
     </div>

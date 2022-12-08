@@ -18,7 +18,6 @@
                                 <th>{{trans('admin.updated_at')}}</th>
                                 <th>{{trans('admin.email')}}</th>
                                 <th>{{trans('admin.name')}}</th>
-                                <th>{{trans('admin.role')}}</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -36,7 +35,6 @@
                                     <td>{{$userinfo->updated_at}}</td>
                                     <td>{{$userinfo->email}}</td>
                                     <td>{{ $userinfo->name }}</td>
-                                    <td>{{ $userinfo->role }}</td>
                                 </tr>
                             @endforeach
                             </tbody>
@@ -51,7 +49,6 @@
                                 <th>{{trans('admin.updated_at')}}</th>
                                 <th>{{trans('admin.email')}}</th>
                                 <th>{{trans('admin.name')}}</th>
-                                <th>{{trans('admin.role')}}</th>
                             </tr>
                             </tfoot>
                         </table>

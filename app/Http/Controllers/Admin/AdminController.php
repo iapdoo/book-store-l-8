@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Middleware\Admin;
 use App\Models\Category;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -33,7 +34,6 @@ class AdminController extends Controller
     {
         $data = $this->validate(\request(), [
             'name' => 'required',
-            'role' => 'required|in:user,admin',
             'email' => 'required|email|unique:users,email,' . $id,
             'password' => 'sometimes|nullable|min:6',
         ], [], []);
@@ -65,16 +65,13 @@ class AdminController extends Controller
     {
         $data=$this->validate(\request(),[
             'name'=>'required',
-            'role' => 'required',
             'email'=>'required|email|unique:users',
             'password'=>'required|min:6',
         ],[],[
             'name'=>trans('admin.name'),
-            'Level'=>trans('admin.role'),
             'email'=>trans('admin.email'),
             'password'=>trans('admin.password'),
         ]);
-        $data['role']=request('role');
         $data['password']=bcrypt(\request('password'));
 
 

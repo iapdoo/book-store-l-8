@@ -22,10 +22,7 @@
                     {!! Form::label('password',trans('admin.password')) !!}
                     {!! Form::password('password',['class'=>'form-control']) !!}
                 </div>
-                <div class="form-group ">
-                    {!! Form::label('role',trans('admin.role')) !!}
-                    {!! Form::select('role',['user'=>'user','admin'=>'admin'],old('role'),['class'=>'form-control','placeholder'=>trans('admin.role')]) !!}
-                </div>
+
                 {!! Form::submit(trans('admin.creat_admin'),['class'=>'btn btn-primary form-control']) !!}
                 {!! Form::close() !!}
             <!-- route admin.store function or url aurl('admin') this header for store function  -->

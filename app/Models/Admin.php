@@ -17,6 +17,6 @@ class Admin extends Model implements AuthenticatableContract {
         'password',
     ];
     public function contacts(){
-        return $this->hasMany('App\Models\Contact','contact_id','id');
+        return $this->hasMany('App\Models\Contact','admin_id','id');
     }
 }
